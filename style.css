@@ -73,7 +73,7 @@ body {
   display: inline-block;
   width: 90vw;
   max-width: 400px;
-  margin-bottom: 20px;
+  margin-bottom: -20px;
   height: 854.868px;
   border-radius: 8px;
   overflow: hidden;
