@@ -66,6 +66,7 @@ body {
   justify-content: center;
   align-items: flex-end;
   z-index: 1;
+  margin-bottom: 0px;
   
 }
 
@@ -73,7 +74,7 @@ body {
   display: inline-block;
   width: 90vw;
   max-width: 400px;
-  margin-bottom: -50px;
+
   height: 854.868px;
   border-radius: 8px;
   overflow: hidden;
@@ -116,7 +117,7 @@ body {
 .tinder--buttons {
   flex: 0 0 100px;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .tinder--buttons button {
