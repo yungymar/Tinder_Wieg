@@ -74,7 +74,6 @@ body {
   display: inline-block;
   width: 90vw;
   max-width: 400px;
-
   height: 854.868px;
   border-radius: 8px;
   overflow: hidden;
@@ -117,7 +116,7 @@ body {
 .tinder--buttons {
   flex: 0 0 100px;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 .tinder--buttons button {
