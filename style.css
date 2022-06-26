@@ -10,6 +10,10 @@ body {
   font-family: sans-serif;
 }
 
+img {
+  width: 50%;
+}
+
 .tinder {
   width: 100vw;
   height: 100vh;
@@ -67,14 +71,13 @@ body {
   align-items: flex-end;
   z-index: 1;
 
+
 }
 
 .tinder--card {
   display: inline-block;
-  width: 90vw;
   max-width: 400px;
   margin-bottom: -20px;
-  height: 854.868px;
   border-radius: 8px;
   overflow: hidden;
   position: absolute;
