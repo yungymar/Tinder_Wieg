@@ -80,9 +80,9 @@ var yBaseBall1 = 0;
 
 
 // trigger swipe
-var ball1MaxThreshold = 390;
+var ball1MaxThreshold = 70;
 // reset swipe
-var ball1MinThreshold = 20;
+var ball1MinThreshold = 10;
 
 var xBaseBall2 = 640;
 var yBaseBall2 = 0;
@@ -162,7 +162,7 @@ function draw() {
     if (target[i].count > 0) {
         // Draw a circle at the tracked pixel
         target[i].avgX = target[i].avgX/target[i].count
-        console.log(target[i].avgX);
+//         console.log(target[i].avgX);
         target[i].avgY = target[i].avgY/target[i].count
 
         fill(target[i].rgb);
