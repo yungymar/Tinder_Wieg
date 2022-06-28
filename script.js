@@ -75,14 +75,17 @@ love.addEventListener('click', loveListener);
 // p5 tracker
 
 
-var xBaseBall1 = 0;
+var xBaseBall1 = 350;
 var yBaseBall1 = 0;
 
 
 // trigger swipe
-var ball1MaxThreshold = 500;
+var ball1MaxThreshold = 70;
 // reset swipe
 var ball1MinThreshold = 10;
+
+
+
 
 var xBaseBall2 = 640;
 var yBaseBall2 = 0;
@@ -92,10 +95,18 @@ var ball2MaxThreshold = 390;
 // reset swipe
 var ball2MinThreshold = 50;
 
+
+
+
+
+
+
+
+
 //////////////////////
 
 
-var distanceBall1 = 370;
+var distanceBall1 = 0;
 var triggerLove = 0;
 var distanceBall2 = 0;
 var triggerNope = 0;
@@ -162,7 +173,7 @@ function draw() {
     if (target[i].count > 0) {
         // Draw a circle at the tracked pixel
         target[i].avgX = target[i].avgX/target[i].count
-//         console.log(target[i].avgX);
+        console.log(target[i].avgX);
         target[i].avgY = target[i].avgY/target[i].count
 
         fill(target[i].rgb);
