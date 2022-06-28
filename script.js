@@ -80,7 +80,7 @@ var yBaseBall1 = 0;
 
 
 // trigger swipe
-var ball1MaxThreshold = 450;
+var ball1MaxThreshold = 200;
 // reset swipe
 var ball1MinThreshold = 10;
 
