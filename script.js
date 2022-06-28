@@ -75,14 +75,14 @@ love.addEventListener('click', loveListener);
 // p5 tracker
 
 
-var xBaseBall1 = 370;
+var xBaseBall1 = 315;
 var yBaseBall1 = 0;
 
 
 // trigger swipe
-var ball1MaxThreshold = 200;
+var ball1MaxThreshold = 70;
 // reset swipe
-var ball1MinThreshold = 10;
+var ball1MinThreshold = 20;
 
 var xBaseBall2 = 640;
 var yBaseBall2 = 0;
