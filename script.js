@@ -75,7 +75,7 @@ love.addEventListener('click', loveListener);
 // p5 tracker
 
 
-var xBaseBall1 = 0;
+var xBaseBall1 = 370;
 var yBaseBall1 = 0;
 
 
@@ -95,7 +95,7 @@ var ball2MinThreshold = 50;
 //////////////////////
 
 
-var distanceBall1 = 370;
+var distanceBall1 = 0;
 var triggerLove = 0;
 var distanceBall2 = 0;
 var triggerNope = 0;
