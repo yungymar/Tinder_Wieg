@@ -178,12 +178,15 @@ function draw() {
 
       if ( distanceBall1 > ball1MaxThreshold && triggerLove == 0){
         triggerLove = 1;
+        console.log(distanceBall1);
         console.log("trigger love");
         document.getElementById("love").click();
       }
 
       if ( distanceBall1 < ball1MinThreshold && triggerLove == 1){
         triggerLove = 0;
+        console.log(distanceBall1);
+        console.log("reset love");
       }
     }
 
