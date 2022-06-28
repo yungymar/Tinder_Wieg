@@ -173,7 +173,7 @@ function draw() {
     if (target[i].count > 0) {
         // Draw a circle at the tracked pixel
         target[i].avgX = target[i].avgX/target[i].count
-        console.log(target[i].avgX);
+//         console.log(target[i].avgX);
         target[i].avgY = target[i].avgY/target[i].count
 
         fill(target[i].rgb);
@@ -186,6 +186,7 @@ function draw() {
     // trigger love ball 1
     if(target[0]){
       distanceBall1 = dist(target[0].avgX,target[0].avgY,xBaseBall1,yBaseBall1);
+      console.log(distanceBall1);
 
       if ( distanceBall1 > ball1MaxThreshold && triggerLove == 0){
         triggerLove = 1;
