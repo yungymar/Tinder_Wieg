@@ -13,7 +13,7 @@ function initCards(card, index) {
     card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
     card.style.opacity = (10 - index) / 10;
   });
-
+  
   tinderContainer.classList.add('loaded');
 }
 
@@ -45,7 +45,7 @@ function createButtonListener(love) {
 
     if (!cards.length){
       return false;
-    }
+    } 
 
     var card = cards[0];
 
@@ -75,41 +75,29 @@ love.addEventListener('click', loveListener);
 // p5 tracker
 
 
-var xBaseBall1 = 350;
+var xBaseBall1 = 0;
 var yBaseBall1 = 0;
 
-
 // trigger swipe
-var ball1MaxThreshold = 70;
+var ball1MaxThreshold = 300;
 // reset swipe
-var ball1MinThreshold = 10;
-
-
-
+var ball1MinThreshold = 100
 
 var xBaseBall2 = 640;
-var yBaseBall2 = 0;
+var yBaseBall2 = 100;
 
 // trigger swipe
-var ball2MaxThreshold = 390;
+var ball2MaxThreshold = 300;
 // reset swipe
-var ball2MinThreshold = 50;
-
-
-
-
-
-
-
-
+var ball2MinThreshold = 100;
 
 //////////////////////
 
 
 var distanceBall1 = 0;
-var triggerLove = 0;
+var triggerLove = 0; 
 var distanceBall2 = 0;
-var triggerNope = 0;
+var triggerNope = 0; 
 
 var cam;
 var target = [];
@@ -137,7 +125,7 @@ function draw() {
     noStroke();
     fill(255);
     text (threshold, 10, 10);
-
+    	
 
 
     cam.loadPixels();
@@ -173,32 +161,27 @@ function draw() {
     if (target[i].count > 0) {
         // Draw a circle at the tracked pixel
         target[i].avgX = target[i].avgX/target[i].count
-//         console.log(target[i].avgX);
         target[i].avgY = target[i].avgY/target[i].count
-
+     
         fill(target[i].rgb);
         strokeWeight(5);
         stroke(0);
         ellipse(target[i].avgX, target[i].avgY, 16, 16);
-        text("id:"+i, target[i].avgX+10, target[i].avgY+10)
+        text("id:"+i, target[i].avgX+10, target[i].avgY+10)   
     }
 
     // trigger love ball 1
     if(target[0]){
       distanceBall1 = dist(target[0].avgX,target[0].avgY,xBaseBall1,yBaseBall1);
-      console.log(distanceBall1);
 
       if ( distanceBall1 > ball1MaxThreshold && triggerLove == 0){
         triggerLove = 1;
-        console.log(distanceBall1);
         console.log("trigger love");
         document.getElementById("love").click();
       }
 
       if ( distanceBall1 < ball1MinThreshold && triggerLove == 1){
         triggerLove = 0;
-        console.log(distanceBall1);
-        console.log("reset love");
       }
     }
 
@@ -228,20 +211,20 @@ function mousePressed() {
 }
 
 
-function TargetColor(_color){
+function TargetColor(_color){     
    this.rgb = _color;
    this.red = red(_color);
    this.green = green(_color);
    this.blue = blue(_color);
    this.avgX = 0;
    this.avgY = 0;
-   this.count = 0;
+   this.count = 0; 
    this.reset = function() {
        this.avgX = 0;
        this.avgY = 0;
-       this.count = 0;
+       this.count = 0; 
    }
-
+       
 }
 
 function keyTyped() {
@@ -250,14 +233,12 @@ function keyTyped() {
     }
     else if(key  == 'd') {
         threshold -= 2.5
-
+        
     }
     else if( key == 'r'){
             target = []
     }
 }
-
-
 
 window.onkeydown= function(e){
   console.log("he");
@@ -272,4 +253,9 @@ window.onkeydown= function(e){
   };
 
 }
-// ha
+
+
+
+
+
+
